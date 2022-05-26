@@ -1,0 +1,34 @@
+<section>
+  <h2>Upload New Composition</h2>
+
+  <form class="new-composition-form">
+    <div>
+      <label for="composition-title">Title</label>
+      <input type="text" id="composition-title" name="composition-title" />
+    </div>
+    <div>
+      <label for="composition-length">Length (in seconds)</label>
+      <input type="text" id="composition-length" name="composition-length" />
+    </div>
+    <div>
+      <label for="composition-date">Publication Date</label>
+      <input type="text" id="composition-date" name="composition-date" />
+    </div>
+    <div>
+      <label for="composition-score_url">Link to Score</label>
+      <input type="text" id="composition-score_url" name="composition-score_url" />
+    </div>
+    <div>
+      <label for="composition-recording_url">Link to Recording</label>
+      <input type="text" id="composition-recording_url" name="composition-recording_url" />
+    </div>
+    <div>
+      <label for="composition-instruments">Instruments Used</label>
+      <input type="text" id="composition-instruments" name="composition-instruments" />
+    </div>
+    <button id="add-composition-btn" type="submit" class="btn">Upload</button>
+  </form>
+</section>
+
+{{!-- // Link the script that will create the post by making the post request --}}
+<script src="/javascript/add-composition.js"></script>

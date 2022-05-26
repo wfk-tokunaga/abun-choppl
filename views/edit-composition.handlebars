@@ -1,0 +1,22 @@
+<div class="edit-composition">
+    <h2>Edit Composition Information</h2>
+    <form class="edit-composition-form">
+        <h3>Title</h3>
+        <textarea name="new-title" id="new-title">{{composition.title}}</textarea>
+        <h3>Length</h3>
+        <textarea name="new-length" id="new-length">{{composition.length}}</textarea>
+        <h3>Publication Date</h3>
+        <textarea name="new-date" id="new-date">{{composition.date}}</textarea>
+        <h3>Link to Score</h3>
+        <textarea name="new-score_url" id="new-score_url">{{composition.score_url}}</textarea>
+        <h3>Link to Recording</h3>
+        <textarea name="new-recording_url" id="new-recording_url">{{composition.recording_url}}</textarea>
+        <h3>Instruments Used</h3>
+        <textarea name="new-instrumentIds" id="new-instrumentIds">{{composition.instrumentIds}}</textarea>
+    <button id="update-composition-btn" type="submit" class="btn">Update</button>
+  </form>
+    <button id="delete-composition-btn" type="submit" class="btn">Delete</button>
+</div>
+
+<script src="/javascript/edit-composition.js"></script>
+<script src="/javascript/delete-composition.js"></script>

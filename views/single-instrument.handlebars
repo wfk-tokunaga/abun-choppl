@@ -1,0 +1,20 @@
+<article class="instrument">
+      <div class="title-section">
+          <a href="/instrument/{{id}}">{{name}}</a>
+        {{!-- <h1 class="title">{{title}}</h1> --}}
+        {{!-- Later on, change the format of the date --}}
+        {{!-- <span class="comp-info">Posted by {{user.username}} on {{created_at}}</span> --}}
+      </div>
+      <div class="composition-section">
+          <h2>featured pieces</h2>
+            <ul>
+                  {{#each compositions as |composition|}}
+                  <li>
+                        <a href="/composition/{{composition.id}}">{{composition.title}}</a>
+                  </li>
+                  {{/each}}
+            </ul>
+
+            {{!-- <p>{{instrument}}</p> --}}
+      </div>
+</article>

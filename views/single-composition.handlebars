@@ -1,0 +1,19 @@
+{{!-- Use composition info partial, which just shows the composition and the title --}}
+{{> comp-info composition}}
+
+{{!-- Show comment input box --}}
+{{!-- {{#if loggedIn}}
+<form id="comment-input-form">
+    <h3>Comment</h3>
+    <textarea name="new-comment" id="new-comment"></textarea>
+    <button type="submit" id="comment-submit-btn" class="submit-btn">Submit</button>
+</form>
+{{/if}} --}}
+
+{{!-- {{> comments composition.comments }} --}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
+
+<script src="/javascript/comment.js"></script>

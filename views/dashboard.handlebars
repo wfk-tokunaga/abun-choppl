@@ -1,0 +1,20 @@
+{{#if compositions.length}}
+<section>
+  <h2>Your Compositions</h2>
+  <ul id="your-composition-list">
+    {{#each compositions as |composition|}}
+    <li class="composition-listing">
+      {{!-- {{> composition-info composition}} --}}
+      <a href="/dashboard/edit/{{composition.id}}" class="edit-link">
+        <h1 class="title">{{composition.title}}</h1>
+        <span>{{composition.created_at}}</span>
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+  {{!-- This will take us to a new partial to add a composition --}}
+</section>
+{{/if}}
+
+<a href="/dashboard/add-composition">Upload a New Composition</a>
+

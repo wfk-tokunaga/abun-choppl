@@ -1,0 +1,17 @@
+<article class="user">
+      <div class="title-section">
+          <a href="/user/{{id}}">{{username}}</a>
+      </div>
+      <div class="compositions-section">
+          <h2>Compositions</h2>
+            <ul>
+                  {{#each compositions as |composition|}}
+                  <li>
+                        <a href="/composition/{{composition.id}}">{{composition.title}}</a>
+                  </li>
+                  {{/each}}
+            </ul>
+
+            {{!-- <p>{{instrument}}</p> --}}
+      </div>
+</article>
