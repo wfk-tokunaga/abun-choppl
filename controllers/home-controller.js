@@ -5,7 +5,7 @@ such as the homepage and login page
 
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Composition, User, Instrument } = require('../models');
+const { Composition, User, Instrument, CompInstruments } = require('../models');
 
 module.exports = {
     renderHomepage(req, res) {
@@ -144,11 +144,28 @@ module.exports = {
             console.log(dbUserData);
 
             const user = dbUserData.get({plain: true})
-
             res.render('single-user', user);
         }).catch(err => {
             console.log(err);
             res.status(500).json(err);
     })
+    },
+    renderInstrumentsPage(req, res) {
+        Instrument.findAll({
+            include: [{
+                model: Composition
+            }, {
+                model: User
+            }]
+        }).then(dbInstrumentsData => {
+            console.log('\n\n====== Rendering Instruments Page ======\n\n');
+            const instruments = dbInstrumentsData.map(instrument => instrument.get({plain: true}));
+            console.log(instruments);
+            // BUG: Not passing the info into the handlebars template
+            res.render('instruments', instruments);
+        }).catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
     }
 }

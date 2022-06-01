@@ -58,10 +58,12 @@ module.exports = {
                 })
                 .then((composition) => {
                     if (req.body.instrumentIds.length) {
+                        // Making an array to be turned into CompInstruments
                         const compInstrumentArr = req.body.instrumentIds.map((instrument_id) => {
-                            console.log(instrument_id);
+                            console.log("\n\n======\n\n" + instrument_id);
+                            instrument_id = parseInt(instrument_id);
                             return {
-                                compositon_id: composition.id,
+                                composition_id: composition.id,
                                 instrument_id,
                             };
                         });

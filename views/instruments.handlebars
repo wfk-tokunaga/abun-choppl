@@ -1,0 +1,8 @@
+<h2>All Instruments</h2>
+<ul class="instrument-list">
+    {{#each instruments as |instrument|}}
+    <li>
+        {{> instrument-info instrument }}
+    </li>
+    {{/each}}
+</ul>

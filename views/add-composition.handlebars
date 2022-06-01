@@ -12,7 +12,7 @@
     </div>
     <div>
       <label for="composition-date">Publication Date</label>
-      <input type="text" id="composition-date" name="composition-date" />
+      <input type="date" id="composition-date" name="composition-date" />
     </div>
     <div>
       <label for="composition-score_url">Link to Score</label>
@@ -22,13 +22,16 @@
       <label for="composition-recording_url">Link to Recording</label>
       <input type="text" id="composition-recording_url" name="composition-recording_url" />
     </div>
-    <div>
+    {{> select-instruments}}
+    {{!-- <div>
       <label for="composition-instruments">Instruments Used</label>
-      <input type="text" id="composition-instruments" name="composition-instruments" />
-    </div>
+      <input list="instrument-choices" id="composition-instruments" name="composition-instruments"/>
+      <datalist id="instrument-choices"></datalist>
+    </div> --}}
     <button id="add-composition-btn" type="submit" class="btn">Upload</button>
   </form>
 </section>
 
 {{!-- // Link the script that will create the post by making the post request --}}
 <script src="/javascript/add-composition.js"></script>
+<script src="/javascript/load-instruments.js"></script>

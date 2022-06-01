@@ -5,7 +5,7 @@ such as the homepage and login page
 
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { renderHomepage, renderLogin, renderSignUp, renderSingleComposition, renderSingleInstrument, renderSingleUser } = require('../controllers/home-controller');
+const { renderHomepage, renderLogin, renderSignUp, renderSingleComposition, renderSingleInstrument, renderSingleUser, renderInstrumentsPage } = require('../controllers/home-controller');
 
 router.route('/')
     .get(renderHomepage)
@@ -25,6 +25,8 @@ router.route('/instrument/:id')
 router.route('/user/:id')
     .get(renderSingleUser);
 
+router.route('/instruments')
+    .get(renderInstrumentsPage);
     
 module.exports = router;
 

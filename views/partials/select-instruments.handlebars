@@ -1,0 +1,9 @@
+{{!-- A form for users to select instruments --}}
+<div>
+    <label for="composition-instruments">Instruments Used</label>
+    <input list="instrument-choices" id="composition-instruments" name="composition-instruments"/>
+    <datalist id="instrument-choices"></datalist>
+</div>
+
+{{!-- Can have a script in here that loads the instruments --}}
+<script src="/javascript/load-instruments.js"></script>

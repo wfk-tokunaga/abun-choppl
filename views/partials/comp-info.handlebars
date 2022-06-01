@@ -1,9 +1,7 @@
 <article class="comp">
       <div class="title-section">
-          <a href="/composition/{{id}}">{{title}}</a>
-        {{!-- <h1 class="title">{{title}}</h1> --}}
-        {{!-- Later on, change the format of the date --}}
-        <span class="comp-info">by <span class="username"><a href="/user/{{user.id}}">{{user.username}}</a></span></span>
+            <a href="/composition/{{id}}">{{title}}</a>
+            <span class="comp-info">by <span class="username"><a href="/user/{{user.id}}">{{user.username}}</a></span></span>
       </div>
       <div class="instrument-section">
             <ul>
@@ -13,7 +11,5 @@
                   </li>
                   {{/each}}
             </ul>
-
-            {{!-- <p>{{instrument}}</p> --}}
       </div>
 </article>
