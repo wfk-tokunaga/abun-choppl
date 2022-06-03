@@ -24,12 +24,13 @@ module.exports = {
             }, {
                 model: User,
                 // attributes: ['username']
-            }],
+            }]
         }).then(dbCompositionData => {
             // Feed this into the handlebars template
             const compositions = dbCompositionData.map(composition => composition.get({ plain: true }));
-            console.log('\n\n====== Rendering homepage ======\n\n');
+            console.log('\n\n====== Rendering homepage ======\n');
             console.log(compositions);
+            // console.log(`=== TypeOf compositions: ${typeof(compositions)} ===\n\n`);
             res.render('homepage', {
                 compositions,
                 loggedIn: req.session.loggedIn
@@ -156,14 +157,13 @@ module.exports = {
                 model: Composition
             }, {
                 model: User
-            }]
+            }],
         }).then(dbInstrumentsData => {
             console.log('\n\n====== Rendering Instruments Page ======\n\n');
-            const instruments = dbInstrumentsData.map(instrument => instrument.get({plain: true}));
-            console.log(instruments);
-            // BUG: Not passing the info into the handlebars template
-            res.render('instruments', instruments);
-        }).catch(err => {
+            const instruments = dbInstrumentsData.map(instrument => instrument.get({plain: true})); 
+            res.render('instruments', {instruments});
+        })
+        .catch(err => {
             console.log(err);
             res.status(500).json(err);
         })

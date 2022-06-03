@@ -1,8 +1,10 @@
-<h2>All Instruments</h2>
+{{!-- <h2 class="page-title">All Instruments</h2> --}}
+<span class="page-title">All Instruments</span>
 <ul class="instrument-list">
-    {{#each instruments as |instrument|}}
+    {{!-- {{ log people }} --}}
+    {{#each instruments as |instruments|}}
     <li>
-        {{> instrument-info instrument }}
+        {{> instrument-info instruments}}
     </li>
     {{/each}}
 </ul>

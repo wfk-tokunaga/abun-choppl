@@ -2,14 +2,44 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 80%;
     margin: 1rem auto;
+    background-color: lavender;
+}
+
+.composition-list li {
+    list-style: none;
+}
+
+.title-link {
+    font-weight: bolder;
+    font-size: 1.25rem;
+}
+
+.main-title {
+    font-weight: bolder;
+}
+
+.page-title {
+    background-color: purple;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    /* padding: 1rem; */
+}
+
+nav {
+    background-color: lavender;
+    margin-bottom: 1rem;
 }
 
 ul {
     /* list-style: none; */
 }
 
-.comp {
-    margin-bottom: 1rem;
+.listing {
+    padding: 1rem;
+    border: 2px solid purple;
+    margin-top: 2rem;
+    background-color: white;
 }
 
 .username {

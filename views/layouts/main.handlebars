@@ -10,21 +10,18 @@
 
 <body>
   <div class="wrapper">
-      <nav>
-        <a href="/">Compositions</a>
-        <a href="/instruments">Instruments</a>
-        {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    <header>
-      <h1>
-        <a href="/">Abun Choppl</a>
-      </h1>
-    </header>
+    <nav>
+      <a class='main-title' href="/">Abun Choppl</a>
+      <a href="/">Compositions</a>
+      <a href="/instruments">Instruments</a>
+      {{#if loggedIn}}
+      <a href="/dashboard">Dashboard</a>
+      <button id="logout" class="btn-no-style">logout</button>
+      {{else}}
+      <a href="/login">login</a>
+      {{/if}}
+    </nav>
+    
     <main>
       {{{ body }}}
     </main>

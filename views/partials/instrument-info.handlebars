@@ -1,11 +1,11 @@
-<article class="instrument">
+<article class="listing">
     <div class="name-section">
-        <a href="/instrument/{{id}}">{{name}}</a>
+        <a href="/instrument/{{id}}" class="title-link">{{name}}</a>
         {{!-- <span class="comp-info">by <span class="username"><a href="/user/{{user.id}}">{{user.username}}</a></span></span> --}}
     </div>
-
-    {{!-- <div class="instrument-section">
-        <h3>Compositions</h3>
+    <div class="instrument-section">
+        {{#if compositions.length}}
+        Compositions
         <ul>
             {{#each compositions as |comp|}}
             <li>
@@ -13,8 +13,10 @@
             </li>
             {{/each}}
         </ul>
+        {{/if}}
 
-        <h3>Users</h3>
+        {{#if users.length}}
+        Users
         <ul>
             {{#each users as |user|}}
             <li>
@@ -22,6 +24,7 @@
             </li>
             {{/each}}
         </ul>
-    </div> --}}
+        {{/if}}
+    </div>
     
 </article>

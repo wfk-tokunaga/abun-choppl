@@ -1,12 +1,13 @@
 <article class="instrument">
       <div class="title-section">
-          <a href="/instrument/{{id}}">{{name}}</a>
+          {{!-- <a href="/instrument/{{id}}">{{name}}</a> --}}
         {{!-- <h1 class="title">{{title}}</h1> --}}
         {{!-- Later on, change the format of the date --}}
         {{!-- <span class="comp-info">Posted by {{user.username}} on {{created_at}}</span> --}}
+        <h2>{{name}}</h2>
       </div>
       <div class="composition-section">
-          <h2>featured pieces</h2>
+          <h3>Pieces</h3>
             <ul>
                   {{#each compositions as |composition|}}
                   <li>
@@ -14,7 +15,18 @@
                   </li>
                   {{/each}}
             </ul>
-
             {{!-- <p>{{instrument}}</p> --}}
       </div>
+      <div class="user-section">
+          <h3>Composers</h3>
+            <ul>
+                  {{#each users as |user|}}
+                  <li>
+                        <a href="/composition/{{user.id}}">{{user.username}}</a>
+                  </li>
+                  {{/each}}
+            </ul>
+            {{!-- <p>{{instrument}}</p> --}}
+      </div>
+
 </article>
