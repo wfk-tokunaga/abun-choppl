@@ -1,4 +1,8 @@
 const UserInstruments = require('../models/UserInstruments');
+const {numberUsers} = require('./user-seeds')
+
+// For each composition, choose a random number of instrument connections
+
 
 const userInstrumentData = [{
         user_id: 1,

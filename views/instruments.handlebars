@@ -2,9 +2,9 @@
 <span class="page-title">All Instruments</span>
 <ul class="instrument-list">
     {{!-- {{ log people }} --}}
-    {{#each instruments as |instruments|}}
+    {{#each instruments as |instrument|}}
     <li>
-        {{> instrument-info instruments}}
+        {{> instrument-info instrument}}
     </li>
     {{/each}}
 </ul>

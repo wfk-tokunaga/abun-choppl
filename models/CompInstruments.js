@@ -18,7 +18,7 @@ CompInstruments.init({
             model: 'composition',
             key: 'id'
         },
-        onDelete: 'CASCADE'
+        // onDelete: 'CASCADE'
     },
     instrument_id: {
         type: DataTypes.INTEGER,
@@ -26,7 +26,7 @@ CompInstruments.init({
             model: 'instrument',
             key: 'id'
         },
-        onDelete: 'CASCADE'
+        // onDelete: 'CASCADE'
     },
 }, {
     hooks: {},

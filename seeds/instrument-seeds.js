@@ -277,6 +277,8 @@ const instrumentData = [
     { name: `overtone zither` },
 ];
 
+const numberInstruments = instrumentData.length;
+
 const seedInstruments = () => Instrument.bulkCreate(instrumentData);
 
-module.exports = seedInstruments;
+module.exports = {seedInstruments, numberInstruments};

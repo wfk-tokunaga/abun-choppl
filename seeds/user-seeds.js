@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const faker = require('faker');
+const numberUsers = 10;
 
 const userData = [{
         username: 'eika',
@@ -47,6 +49,19 @@ const userData = [{
     },
 ];
 
+for (let i = 0; i < numberUsers; i++) {
+    const username = faker.internet.userName();
+    const email = faker.internet.email(username);
+    const password = faker.internet.password();
+    const first_name = faker.name.firstName();
+    const last_name = faker.name.lastName();
+    const website = faker.internet.url();
+    const numSentences = Math.round(Math.random()*3) + 1;
+    const bio = faker.lorem.paragraph(numSentences);
+
+    userData.push({ username, email, password, first_name, last_name, website, bio });
+}
+
 const seedUsers = () => User.bulkCreate(userData, { individualHooks: true });
 
-module.exports = seedUsers;
+module.exports = {seedUsers, numberUsers};

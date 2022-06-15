@@ -1,4 +1,8 @@
 const Composition = require('../models/Composition');
+const faker = require('faker');
+const {numberUsers} = require('./user-seeds');
+
+const numberCompositions = 100;
 
 const compositionData = [{
         title: 'Lu Dort, ritual',
@@ -146,9 +150,25 @@ const compositionData = [{
     }
 ];
 
+for (let i = 0; i < numberCompositions; i += 1) {
+    // const title = faker.music.songName();
+    // const length = Math.round(Math.random() * 1000) + 1;
+    // const score_link = faker.internet.url();
+    // const recording_link = faker.internet.url();
+    // user_id = Math.round(math.random() * numberUsers) + 1;
+    const addComp = {
+        title: faker.lorem.sentence(),
+        length: Math.round(Math.random() * 1000) + 1,
+        score_link: faker.internet.url(),
+        recording_link: faker.internet.url(),
+        user_id: Math.round(Math.random() * numberUsers) + 1,
+    };
+    compositionData.push(addComp)
+}
+
 const seedCompositions = () => Composition.bulkCreate(compositionData);
 
-module.exports = seedCompositions;
+module.exports = {seedCompositions, numberCompositions};
 
 
 // {

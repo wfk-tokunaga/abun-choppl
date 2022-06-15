@@ -1,6 +1,6 @@
-const seedUsers = require('./user-seeds');
-const seedInstruments = require('./instrument-seeds');
-const seedCompositions = require('./composition-seeds');
+const {seedUsers} = require('./user-seeds');
+const {seedInstruments} = require('./instrument-seeds');
+const {seedCompositions} = require('./composition-seeds');
 const seedUserInstruments = require('./user-instrument-seeds');
 const seedCompInstruments = require('./comp-instrument-seeds');
 
